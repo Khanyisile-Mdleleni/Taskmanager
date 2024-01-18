@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-// import history from '../history';
+import history from "../history";
 // import { toast } from 'react-toastify';
 
-// const initialUser = localStorage.getItem('auth')
-// 	? JSON.parse(localStorage.getItem('auth'))
-// 	: null;
+const initialUser = localStorage.getItem("auth")
+  ? JSON.parse(localStorage.getItem("auth"))
+  : null;
 
 const initialState = {
   isLoading: false,
@@ -68,8 +68,8 @@ export const register = (user) => async (dispatch) => {
     if (response) {
       dispatch(registerSuccess(response.data));
       // toast.success('register successfull');
-      // history.push('/signin');
-      // window.location.reload();
+      history.push("/signin");
+      window.location.reload();
     } else {
       dispatch(registerFailure());
       // toast.error('registration failed');
@@ -80,30 +80,30 @@ export const register = (user) => async (dispatch) => {
   }
 };
 
-// export const signin = (user) => async (dispatch) => {
-//   console.log(user);
-//   try {
-//     const userData = {
-//       email: user.email,
-//       password: user.password,
-//     };
-//     const response = await axios.post(
-//       "http://localhost:3000/auth/signin",
-//       userData
-//     );
-//     if (response) {
-//       localStorage.setItem("auth", JSON.stringify(response.data));
-//       dispatch(loginSuccess(response.data));
+export const signin = (user) => async (dispatch) => {
+  console.log(user);
+  try {
+    const userData = {
+      email: user.email,
+      password: user.password,
+    };
+    const response = await axios.post(
+      "http://localhost:3000/auth/signin",
+      userData
+    );
+    if (response) {
+      localStorage.setItem("auth", JSON.stringify(response.data));
+      dispatch(loginSuccess(response.data));
 
-//       history.push("/dashboard");
-//       toast.success("login successfull");
+      history.push("/dashboard");
+      // toast.success("login successfull");
 
-//       window.location.reload();
-//     } else {
-//       dispatch(loginFailure());
-//       toast.error("login failed");
-//     }
-//   } catch (error) {
-//     dispatch(loginFailure());
-//   }
-// };
+      window.location.reload();
+    } else {
+      dispatch(loginFailure());
+      // toast.error("login failed");
+    }
+  } catch (error) {
+    dispatch(loginFailure());
+  }
+};
