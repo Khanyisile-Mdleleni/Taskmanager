@@ -47,7 +47,6 @@ export const {
 export default authSlice.reducer;
 
 export const register = (user) => async (dispatch) => {
-  console.log(user);
   try {
     const formdata = new FormData();
 
