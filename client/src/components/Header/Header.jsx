@@ -4,7 +4,7 @@ import "../../styles/components/_button.scss";
 import logo from "../../assets/images/logo.png";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-// import { logoutSuccess } from '../../redux/authSlice';
+import { logoutSuccess } from '../../redux/authSlice';
 import history from "../../history";
 
 function Header() {
