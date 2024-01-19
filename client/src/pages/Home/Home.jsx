@@ -1,7 +1,12 @@
 import React from "react";
-import './home.scss';
+import "./home.scss";
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 function Home() {
+  const { auth } = useSelector((state) => ({ ...state }));
+	const { currentUser } = auth;
+
   return (
     <div className="home">
       <div className="home__container">
@@ -13,7 +18,18 @@ function Home() {
           more effectively than before and it provides a full range of tools
           that are designed to empower both
           <br /> people and teams to manage their work efficiently.
-        </p>
+        </p>{" "}
+        <br />
+        <br />
+        {currentUser && currentUser.token ? (
+					<Link to='/dashboard' className='button'>
+						Get Started
+					</Link>
+				) : (
+					<Link to='/signin' className='button'>
+						Get Started
+					</Link>
+				)}
       </div>
     </div>
   );

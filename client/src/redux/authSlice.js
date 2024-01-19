@@ -9,8 +9,8 @@ const initialUser = localStorage.getItem("auth")
 
 const initialState = {
   isLoading: false,
-  currentUser: null,
-  error: null,
+  currentUser: initialUser,
+  error: null, 
 };
 export const authSlice = createSlice({
   name: "auth",
