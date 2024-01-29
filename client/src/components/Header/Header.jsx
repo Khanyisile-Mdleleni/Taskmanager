@@ -43,20 +43,20 @@ function Header() {
           </h4>
         </div>
         <div className="header__buttons">
-          {auth.currentUser && auth.currentUser.token ? (
+          {/* {auth.currentUser && auth.currentUser.token ? (
             <Link to="/signin" className="button" onClick={handleClick}>
               SignOut
             </Link>
-          ) : (
-            <>
+          ) : ( */}
+            {/* <> */}
               <Link to="/signin" className="button">
                 SignIn
               </Link>
-              <Link to="/signup" className="button">
+              {/* <Link to="/signup" className="button">
                 SignUp
               </Link>
             </>
-          )}
+          )} */}
         </div>
       </nav>
     </div>

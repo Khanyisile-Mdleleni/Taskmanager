@@ -21,15 +21,15 @@ function Home() {
         </p>{" "}
         <br />
         <br />
-        {currentUser && currentUser.token ? (
-					<Link to='/dashboard' className='button'>
+        {/* {currentUser && currentUser.token ? ( */}
+					<Link to='/signup' className='button'>
 						Get Started
 					</Link>
-				) : (
+				{/* ) : (
 					<Link to='/signin' className='button'>
 						Get Started
 					</Link>
-				)}
+				)} */}
       </div>
     </div>
   );
