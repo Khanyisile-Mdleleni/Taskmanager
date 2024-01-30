@@ -118,7 +118,7 @@ export const arrowClick = (item, string) => async () => {
 };
 
 export const deleteItem = (id) => async (dispatch) => {
-	let res = await axios.delete(`http://localhost:4000/task/${id}`);
+	let res = await axios.delete(`http://localhost:3000/task/${id}`);
 
 	if (res) {
 		dispatch(deleteSuccess());

@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import SignUp from './components/registration/SignUp'
 import SignIn from './components/registration/SignIn';
 import Home from './pages/Home/Home';
+import Dashboard from './pages/dashboard/Dashboard'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/main.scss';
@@ -24,6 +25,10 @@ function App() {
 					<Route
 						path='/signup'
 						element={<SignUp/>}
+					/>
+					<Route
+						path='/dashboard'
+						element={<Dashboard/>}
 					/>
 				</Routes>
 			</Router>
