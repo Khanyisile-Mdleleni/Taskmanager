@@ -35,28 +35,12 @@ function Header() {
             style={{
               position: "absolute",
               top: "8px",
-              left: "50px",
+              left: "55px",
               marginTop: "-2px",
             }}
           >
             Task Manager
           </h4>
-        </div>
-        <div className="header__buttons">
-          {/* {auth.currentUser && auth.currentUser.token ? (
-            <Link to="/signin" className="button" onClick={handleClick}>
-              SignOut
-            </Link>
-          ) : ( */}
-            {/* <> */}
-              <Link to="/signin" className="button">
-                SignIn
-              </Link>
-              {/* <Link to="/signup" className="button">
-                SignUp
-              </Link>
-            </>
-          )} */}
         </div>
       </nav>
     </div>

@@ -3,19 +3,23 @@
   padding-left: 205px;
 
 
-&__container {
-  // width: 50%;
-  // text-align: center;
+  &__container {
+    // width: 50%;
+    // text-align: center;
 
-  h2 {
+    h2 {
       font-size: 42px;
-  }
+    }
 
-  .button {
+    .button {
       background-color: #C2D9FF;
       margin-top: 1rem;
       font-size: 1.2rem;
       display: inline-block;
+    }
+
+    #home-buttons {
+      margin-left: 180px;
+    }
   }
-}
 }

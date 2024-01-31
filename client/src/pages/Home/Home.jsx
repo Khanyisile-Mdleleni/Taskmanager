@@ -22,8 +22,12 @@ function Home() {
         <br />
         <br />
         {/* {currentUser && currentUser.token ? ( */}
+       
 					<Link to='/signup' className='button'>
 						Get Started
+					</Link>
+          <Link to='/signin' className='button' id="home-buttons">
+						Sign In
 					</Link>
 				{/* ) : (
 					<Link to='/signin' className='button'>
