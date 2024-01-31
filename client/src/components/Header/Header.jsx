@@ -35,7 +35,7 @@ function Header() {
             style={{
               position: "absolute",
               top: "8px",
-              left: "55px",
+              left: "60px",
               marginTop: "-2px",
             }}
           >
