@@ -4,6 +4,7 @@ import SignUp from './components/registration/SignUp'
 import SignIn from './components/registration/SignIn';
 import Home from './pages/Home/Home';
 import Dashboard from './pages/dashboard/Dashboard'
+import Help from './pages/Help/help'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/main.scss';
@@ -43,7 +44,14 @@ function App() {
 							<RequireAuth><Dashboard/>
 							</RequireAuth>}
 					/>
+					<Route
+						path='/help'
+						element={
+							<RequireAuth><Help/>
+							</RequireAuth>}
+					/>
 				</Routes>
+				
 			</Router>
     </>
   )

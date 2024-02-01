@@ -1,8 +1,12 @@
-.SideMenu {
+.sidebar {
     background-color: #C2D9FF;
-    width: 200px;
-}
+    height: 100vh;
+    padding: 1rem;
+    max-width: 15vw;
 
-.SideMenu .ant-menu-item {
-    margin-bottom: 20px;
+    .list-item {
+        margin: 3rem 0;
+        list-style: none;
+        padding-left: 3rem;
+    }
 }
