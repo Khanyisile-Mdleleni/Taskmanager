@@ -11,7 +11,7 @@ const getItems = (panelStyle) => [
     key: "1",
     label: "What is TaskMaster ?",
     children: (
-      <p>
+      <p className="text-area">
         It is a computer program that facilitates project planning,
         organization, and management. It can be used to manage resources, assign
         tasks, monitor progress, and establish communication with stakeholders
@@ -25,14 +25,14 @@ const getItems = (panelStyle) => [
   {
     key: "2",
     label: "Does TaskMaster integrate with other  task management softwares ?",
-    children: <p>No, it deosn't</p>,
+    children: <p className="text-area">No, it deosn't</p>,
     style: panelStyle,
   },
   {
     key: "3",
     label: "What are the benefits of using TaskMaster Tool ?",
     children: (
-      <p>
+      <p className="text-area">
         By leveraging TaskMater software, teams can enhance their organization,
         efficiency, collaboration, and visibility, leading to more successful
         project outcomes.
@@ -44,7 +44,7 @@ const getItems = (panelStyle) => [
     key: "4",
     label: "Can we try TaskMaster for free ?",
     children: (
-      <p>
+      <p className="text-area">
         Absolutely! The free Basic version allows unlimited project creation, so
         you can create as many projects as you need.
       </p>
@@ -54,7 +54,7 @@ const getItems = (panelStyle) => [
   {
     key: "5",
     label: " How many members can be added to a project ?",
-    children: <p>A maximum of 4</p>,
+    children: <p className="text-area">A maximum of 4</p>,
     style: panelStyle,
   },
 ];
@@ -73,31 +73,34 @@ function Help() {
         <div className="dashboard__left">
           <Sidebar />
         </div>
-        <div className='dashboard__right'>
-					<div className='dashboard__rightContent'>
-        <h1 className="title">F.A.Qs</h1>
-
-        <Collapse
-          bordered={false}
-          defaultActiveKey={["1"]}
-          expandIcon={({ isActive }) => (
-            <CaretRightOutlined rotate={isActive ? 90 : 0} />
-          )}
-          style={{
-            background: token.colorBgContainer,
-            width: "1150px",
-          }}
-          items={getItems(panelStyle)}
-        />
-        <div>
-          <h6>Didn't find the answer</h6> <br />
-          <div>
-            <Link to="/contact">
-              <Button type="button">Contact Us</Button>
-            </Link>
+        <div className="dashboard__right">
+          
+            <h1 className="title">F.A.Qs</h1>
+            <div className="dashboard__rightContent">
+            <Collapse
+              bordered={false}
+              defaultActiveKey={["1"]}
+              expandIcon={({ isActive }) => (
+                <CaretRightOutlined rotate={isActive ? 90 : 0} />
+              )}
+              style={{
+                background: token.colorBgContainer,
+                width: "1150px",
+              }}
+              items={getItems(panelStyle)}
+            />
+           
           </div>
-          </div>
-      </div>
+          <div className="title">
+              <h6>Didn't find the answer</h6> <br />
+              <div>
+                <Link to="/contact">
+                  <Button type="button" className="button">
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
+            </div>
         </div>
       </div>
     </>
