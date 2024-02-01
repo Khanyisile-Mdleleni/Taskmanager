@@ -3,6 +3,7 @@
 .dashboard {
     width: 100%;
     height: 100vh;
+    
     display: flex;
 
     &__left {
@@ -11,11 +12,12 @@
 
     &__right {
         width: 85%;
-        
+        margin-top: 2rem;
+        padding: 20px;
     }
 
     &__rightContent {
-        width: 50%;
+        width: 100%;
 
     }
 
@@ -24,12 +26,10 @@
         width: 10rem;
 
     }
-
-    .title {
+    .title{
         padding-left: 33rem;
     }
-
-    .text-area {
+    .text-area{
         font-size: 0.9rem;
     }
 }
