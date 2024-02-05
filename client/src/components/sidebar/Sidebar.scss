@@ -3,12 +3,11 @@
     height: 100vh;
     padding: 1rem;
     max-width: 15vw;
-    margin-bottom: 20px;
-    
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
 
     .list-item {
-        margin: 3rem 0;
+        margin: 3rem 0 5rem;
         list-style: none;
-        padding-left: 2.3rem;
+        padding-left: 0.75rem;
     }
 }
