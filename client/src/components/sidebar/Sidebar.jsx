@@ -6,16 +6,24 @@ const Sidebar = () => {
     <div>
       <ul className="sidebar">
         <li className="list-item">
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <i className="fas fa-home"></i> Home
+          </Link>
         </li>
         <li className="list-item">
-          <Link to="/settings">Tasks</Link>
+          <Link to="/settings">
+            <i className="fas fa-tasks"></i> Tasks
+          </Link>
         </li>
         <li className="list-item">
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/dashboard">
+            <i className="fas fa-chart-bar"></i> Dashboard
+          </Link>
         </li>
         <li className="list-item">
-          <Link to="/help">Help</Link>
+          <Link to="/help">
+            <i className="fas fa-question-circle"></i> Help
+          </Link>
         </li>
       </ul>
     </div>
