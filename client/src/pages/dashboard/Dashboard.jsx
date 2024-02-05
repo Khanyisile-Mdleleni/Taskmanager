@@ -38,13 +38,13 @@ const Dashboard = () => {
         <div className="dashboard__right">
           <div className="dashboard__rightContent">
             <h2>
-              Welcome back {currentUser.username} !
+              Welcome back  {currentUser.username} !
               <span id="wave" role="img" aria-labelledby="wave">
                 👋🏻
               </span>{" "}
             </h2>
             <div className="taskcount">
-              <div className="todo box">Todo </div>
+              <div className="todo box">To do </div>
               <div className="todo box">In progress </div>
               <div className="done box">Complete </div>
             </div>
