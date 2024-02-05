@@ -7,7 +7,7 @@ const Sidebar = () => {
       <ul className="sidebar">
         <li className="list-item">
           <Link to="/">
-            <i className="fas fa-home"></i> Home
+            <i className="fas fa-home" id = "home-btn"></i> Home
           </Link>
         </li>
         <li className="list-item">
