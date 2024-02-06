@@ -6,7 +6,11 @@ import Home from "./pages/Home/Home";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Help from "./pages/Help/help";
 import Contact from "./pages/Contact/Contact";
-import TaskManager from "./pages/taskmanagement/TaskManager"
+import TaskManager from "./pages/taskmanagement/TaskManager";
+import Files from "./pages/Files/Files";
+import Notes from "./pages/Notes/Notes";
+import Board from "./pages/Board/Board";
+import Tasks from "./pages/Tasks/Tasks";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./styles/main.scss";
@@ -52,6 +56,38 @@ function App() {
             element={
               <RequireAuth>
                 <Contact />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/files"
+            element={
+              <RequireAuth>
+                <Files />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/notes"
+            element={
+              <RequireAuth>
+                <Notes />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/board"
+            element={
+              <RequireAuth>
+                <Board />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/tasks"
+            element={
+              <RequireAuth>
+                <Tasks />
               </RequireAuth>
             }
           />

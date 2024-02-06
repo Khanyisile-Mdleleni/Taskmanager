@@ -8,12 +8,12 @@ import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
 import TableChartOutlinedIcon from "@mui/icons-material/TableChartOutlined";
 import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
 import DriveFileRenameOutlineOutlinedIcon from '@mui/icons-material/DriveFileRenameOutlineOutlined';
-import Files from "./Files";
-import Notes from './Notes';
-import Task from './Task';
-import Board from './Board';
+import Files from "../Files/Files"
+import Notes from '../Notes/Notes';
+import Tasks from '../Tasks/Tasks';
+import Board from '../Board/Board';
 
-function Tasks() {
+function taskmanager() {
   const [value, setValue] = React.useState("1");
 
   const handleChange = (event, newValue) => {
@@ -39,7 +39,7 @@ function Tasks() {
             </TabList>
           </Box>
           <TabPanel value="1">
-          <Task />
+          <Tasks />
           </TabPanel>
           <TabPanel value="2">
           <Board />
@@ -57,5 +57,5 @@ function Tasks() {
   );
 }
 
-export default Tasks;
+export default taskmanager;
 
