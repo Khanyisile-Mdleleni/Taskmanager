@@ -11,7 +11,7 @@ const Sidebar = () => {
           </Link>
         </li>
         <li className="list-item">
-          <Link to="/settings">
+          <Link to="/taskmanager">
             <i className="fas fa-tasks"></i> Tasks
           </Link>
         </li>

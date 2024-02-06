@@ -6,11 +6,10 @@ import Home from "./pages/Home/Home";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Help from "./pages/Help/help";
 import Contact from "./pages/Contact/Contact";
+import TaskManager from "./pages/taskmanagement/TaskManager"
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./styles/main.scss";
-
-import TaskManager from "./pages/taskmanagement/TaskManager";
 import RequireAuth from "./utils/RequireAuth";
 import { useSelector } from "react-redux";
 
