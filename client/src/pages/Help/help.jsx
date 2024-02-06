@@ -69,14 +69,14 @@ function Help() {
   return (
     <>
       {" "}
-      <div className="dashboard">
-        <div className="dashboard__left">
+      <div className="help">
+        <div className="help__left">
           <Sidebar />
         </div>
-        <div className="dashboard__right">
+        <div className="help__right">
           
             <h1 className="title">F.A.Qs</h1>
-            <div className="dashboard__rightContent">
+            <div className="help__rightContent">
             <Collapse
               bordered={false}
               defaultActiveKey={["1"]}
