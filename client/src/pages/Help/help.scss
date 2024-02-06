@@ -16,6 +16,7 @@
 
     &__rightContent {
         width: 100%;
+        text-align: left;
     }
 
     .button {
@@ -32,6 +33,7 @@
     }
     .text {
         font-weight: bold;
+        padding-left: 1rem;
     }
     #home-btn{
         padding-right: 00rem;

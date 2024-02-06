@@ -91,7 +91,7 @@ function Help() {
             />
            
           </div>
-          <div className="title">
+          
               <h6 className="text"> Didn't find the answer</h6> <br />
               <div>
                 <Link to="/contact">
@@ -102,7 +102,7 @@ function Help() {
               </div>
             </div>
         </div>
-      </div>
+     
     </>
   );
 }
