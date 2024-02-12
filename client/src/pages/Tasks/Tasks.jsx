@@ -5,13 +5,13 @@ import './Tasks.scss';
 
 const Tasks = () => {
   const [data, setData] = useState([
-    { id: 1, taskName: 'Task 1', status: 'In Progress', dueDate: '2024-02-12', assignee: 'John Doe', priority: 'High' },
+    { id: 1, taskName: 'Task 1', status: 'In Progress', dueDate: new Date('2024-02-12'), assignee: 'John Doe', priority: 'High' },
   ]);
 
   const [newTask, setNewTask] = useState({
     taskName: '',
     status: '',
-    dueDate: new Date(),
+    dueDate: new Date(), // Set initial state to the current date
     assignee: '',
     priority: '',
   });
@@ -80,7 +80,7 @@ const Tasks = () => {
             <label>Due Date:</label>
             <DatePicker
               selected={newTask.dueDate}
-              onChange={(date) => handleInputChange({ target: { name: 'dueDate', value: date } })}
+              onChange={(date) => setNewTask((prevState) => ({ ...prevState, dueDate: date }))}
               dateFormat="yyyy-MM-dd"
             />
           </div>
@@ -125,7 +125,7 @@ const Tasks = () => {
             <tr key={item.id}>
               <td>{item.taskName}</td>
               <td>{item.status}</td>
-              <td>{item.dueDate}</td>
+              <td>{item.dueDate.toLocaleDateString()}</td>
               <td>{item.assignee}</td>
               <td>{item.priority}</td>
               <td>
