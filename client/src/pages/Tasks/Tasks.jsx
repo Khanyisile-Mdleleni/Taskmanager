@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import './Tasks.scss';
 
 const Tasks = () => {
@@ -9,7 +11,7 @@ const Tasks = () => {
   const [newTask, setNewTask] = useState({
     taskName: '',
     status: '',
-    dueDate: '',
+    dueDate: new Date(),
     assignee: '',
     priority: '',
   });
@@ -28,7 +30,7 @@ const Tasks = () => {
     setNewTask({
       taskName: '',
       status: '',
-      dueDate: '',
+      dueDate: new Date(),
       assignee: '',
       priority: '',
     });
@@ -64,20 +66,22 @@ const Tasks = () => {
           </div>
           <div className="input-group">
             <label>Status:</label>
-            <input
-              type="text"
+            <select
               name="status"
               value={newTask.status}
               onChange={handleInputChange}
-            />
+            >
+              <option value="To Do">To Do</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Completed">Completed</option>
+            </select>
           </div>
           <div className="input-group">
             <label>Due Date:</label>
-            <input
-              type="text"
-              name="dueDate"
-              value={newTask.dueDate}
-              onChange={handleInputChange}
+            <DatePicker
+              selected={newTask.dueDate}
+              onChange={(date) => handleInputChange({ target: { name: 'dueDate', value: date } })}
+              dateFormat="yyyy-MM-dd"
             />
           </div>
           <div className="input-group">
@@ -91,12 +95,15 @@ const Tasks = () => {
           </div>
           <div className="input-group">
             <label>Priority:</label>
-            <input
-              type="text"
+            <select
               name="priority"
               value={newTask.priority}
               onChange={handleInputChange}
-            />
+            >
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
           </div>
           <button onClick={handleCreateTask}>Create Task</button>
           <button onClick={() => setShowForm(false)}>Cancel</button>
