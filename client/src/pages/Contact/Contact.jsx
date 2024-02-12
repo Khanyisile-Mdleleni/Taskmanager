@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Form, Input, Button, message } from "antd";
 import "./contact.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const { TextArea } = Input;
 
@@ -22,6 +23,19 @@ function Contact() {
       span: 24,
     },
   };
+
+  //-------------------------------Recaptcha Verification---------------
+
+  const [verified, setVerified] = useState(false);
+  
+  //------------------------------------------Ref for Recaptcha--------------
+
+  const recaptchaRef = useRef();
+
+  function handleRecaptchaChange(value) {
+    console.log("Captcha value:", value);
+    setVerified(value); // Update the verified state with the reCAPTCHA value
+  }
 
   return (
     <>
@@ -74,7 +88,13 @@ function Contact() {
                   <TextArea rows={4} />
                 </Form.Item>
                 <Form.Item>
-                  <Button type="primary" htmlType="submit">
+                  <br />
+                  <ReCAPTCHA
+                    sitekey="6LdbpW8pAAAAAMOCJpnuJ1Rv4Ido5eR6sMkNRQFB"
+                    onChange={handleRecaptchaChange}
+                  />
+                  <br />
+                  <Button type="primary" htmlType="submit" disabled={!verified}>
                     Send Message
                   </Button>
                 </Form.Item>
