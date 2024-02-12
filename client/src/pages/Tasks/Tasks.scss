@@ -1,0 +1,50 @@
+.editable-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+}
+
+.create-task {
+  margin-bottom: 20px;
+}
+
+.create-task h2 {
+  margin-bottom: 10px;
+}
+
+.create-task .input-group {
+  margin-bottom: 10px;
+}
+
+.create-task label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+.create-task input[type='text'] {
+  width: 200px;
+  padding: 5px;
+}
+
+.create-task button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.task-button{
+  margin-left: 1rem;
+}
