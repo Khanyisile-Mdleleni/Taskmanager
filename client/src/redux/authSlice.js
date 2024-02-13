@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import history from "../history";
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const initialUser = localStorage.getItem("auth")
   ? JSON.parse(localStorage.getItem("auth"))
@@ -67,12 +67,12 @@ export const register = (user) => async (dispatch) => {
 
     if (response) {
       dispatch(registerSuccess(response.data));
-      // toast.success('register successfull');
+      toast.success('register successfull');
       history.push("/signin");
       window.location.reload();
     } else {
       dispatch(registerFailure());
-      // toast.error('registration failed');
+      toast.error('registration failed');
     }
   } catch (error) {
     console.log(error);
@@ -96,12 +96,12 @@ export const signin = (user) => async (dispatch) => {
       dispatch(loginSuccess(response.data));
 
       history.push("/dashboard");
-      // toast.success("login successfull");
+      toast.success("login successfull");
 
       window.location.reload();
     } else {
       dispatch(loginFailure());
-      // toast.error("login failed");
+      toast.error("login failed");
     }
   } catch (error) {
     dispatch(loginFailure());
