@@ -11,7 +11,7 @@ const Tasks = () => {
   const [newTask, setNewTask] = useState({
     taskName: '',
     status: '',
-    dueDate: new Date(), // Set initial state to the current date
+    dueDate: new Date(),
     assignee: '',
     priority: '',
   });
