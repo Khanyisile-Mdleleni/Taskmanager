@@ -1,0 +1,42 @@
+
+.board-page {
+    display: flex;
+    justify-content: space-around;
+}
+
+.board-column {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.board-column h3 {
+    margin-top: 0;
+}
+
+.board-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.board-column li {
+    margin-bottom: 5px;
+}
+
+
+.todo-column {
+    background-color: #ffe0e0;
+    /* Light red */
+}
+
+.inprogress-column {
+    background-color: #e0e0ff;
+    /* Light blue */
+}
+
+.completed-column {
+    background-color: #e0ffe0;
+    /* Light green */
+}
