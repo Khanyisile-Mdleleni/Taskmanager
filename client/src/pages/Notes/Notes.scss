@@ -1,0 +1,83 @@
+.notes-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .notes {
+    margin-bottom: 20px;
+  }
+  
+  .note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  
+    p {
+      font-size: 14px; /* Adjust the font size as needed */
+      margin: 0;
+    }
+  
+    input[type='text'] {
+      flex-grow: 1;
+      padding: 5px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+  
+    .note-buttons {
+      display: flex;
+  
+      button {
+        margin-left: 5px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+  
+      .edit-button {
+        background-color: #2196f3;
+        color: white;
+      }
+  
+      .delete-button {
+        background-color: #f44336;
+        color: white;
+      }
+  
+      .save-button {
+        background-color: #4caf50;
+        color: white;
+      }
+  
+      .cancel-button {
+        background-color: #ccc;
+        color: #333;
+      }
+    }
+  }
+  
+  .add-note {
+    display: flex;
+    align-items: center;
+  
+    input[type='text'] {
+      flex-grow: 1;
+      padding: 5px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+  
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
