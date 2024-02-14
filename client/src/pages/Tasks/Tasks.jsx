@@ -10,10 +10,10 @@ const Tasks = () => {
 
   const [newTask, setNewTask] = useState({
     taskName: '',
-    status: 'To Do', // Ensure it's set to 'To Do' initially
+    status: 'To Do', 
     dueDate: new Date(),
     assignee: '',
-    priority: 'Low', // Or any other default priority
+    priority: 'Low', 
   });
 
   const [showForm, setShowForm] = useState(false);
