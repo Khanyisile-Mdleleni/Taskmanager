@@ -35,7 +35,7 @@ function Header() {
               marginTop: "-2px",
             }}
           >
-            Task Manager
+            Task Master
           </h4>
         </div>
         <Space direction="vertical">
