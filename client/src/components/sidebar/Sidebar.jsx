@@ -25,6 +25,11 @@ const Sidebar = () => {
             <i className="fas fa-question-circle"></i> Help
           </Link>
         </li>
+        <li className="list-item">
+          <Link to="/">
+            <i className="fas fa-arrow-left"></i> Logout
+          </Link>
+        </li>
       </ul>
     </div>
   );
