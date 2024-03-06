@@ -8,11 +8,14 @@ const { TextArea } = Input;
 
 function Contact() {
   const [form] = Form.useForm();
+  const recaptchaRef = useRef();
+  const [verified, setVerified] = useState(false);
 
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
     message.success("Message sent successfully");
     form.resetFields(); // Reset the form fields
+    recaptchaRef.current.reset(); // Reset the ReCAPTCHA
   };
 
   const formItemLayout = {
@@ -23,14 +26,6 @@ function Contact() {
       span: 24,
     },
   };
-
-  //-------------------------------Recaptcha Verification---------------
-
-  const [verified, setVerified] = useState(false);
-  
-  //------------------------------------------Ref for Recaptcha--------------
-
-  const recaptchaRef = useRef();
 
   function handleRecaptchaChange(value) {
     console.log("Captcha value:", value);
@@ -90,6 +85,7 @@ function Contact() {
                 <Form.Item>
                   <br />
                   <ReCAPTCHA
+                    ref={recaptchaRef}
                     sitekey="6LdbpW8pAAAAAMOCJpnuJ1Rv4Ido5eR6sMkNRQFB"
                     onChange={handleRecaptchaChange}
                   />
