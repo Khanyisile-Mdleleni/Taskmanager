@@ -58,7 +58,7 @@ export const addTask = (task, id) => async (dispatch) => {
 		task,
 		id,
 	};
-	const response = await axios.post('http://localhost:4000/task/add', taskData);
+	const response = await axios.post('http://localhost:3000/task/add', taskData);
 	if (response) {
 		localStorage.setItem('task', JSON.stringify(response.data));
 
@@ -82,7 +82,7 @@ export const getAllTasks = (token, id) => async (dispatch) => {
 
 	try {
 		const response = await axios.get(
-			'http://localhost:4000/task/tasks',
+			'http://localhost:3000/task/tasks',
 			config
 		);
 
